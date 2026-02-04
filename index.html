@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Активація Коду</title>
+    <style>
+        :root {
+            --tg-blue: #24A1DE;
+            --bg-color: #f4f7f9;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 350px;
+            text-align: center;
+        }
+
+        .icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+
+        p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-size: 16px;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            border-color: blue;
+        }
+
+        .btn {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 14px;
+            width: 100%;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #1e87bb;
+            transform: translateY(-2px);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="icon">🛡️</div>
+    <h2>Активація коду</h2>
+    <p>Введіть ваш код, щоб надіслати його адміністратору в Telegram</p>
+    
+    <input type="text" id="userCode" placeholder="Введіть ваш код тут..." autocomplete="off">
+    <button onclick="sendToTelegram()" style="padding: 10px 20px; cursor: pointer;">
+    написати менеджеру
+</button>
+
+<script>
+function sendToTelegram() {
+    // Вкажіть тут ваш юзернейм або логін бота (без @)
+    const telegramUsername = "UA_jgdeyGd8"
+
+    // Створюємо пряме посилання на діалог
+    const telegramUrl = "https://t.me/" + telegramUsername;
+
+    // Відкриваємо Telegram у новому вікні
+    window.open(telegramUrl, '_blank');
+}
+</script>
+
+</body>
+</html>
